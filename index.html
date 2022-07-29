@@ -6,8 +6,16 @@
     <body>
         <script>
             function getComputerChoice(max) {
-                return Math.floor(Math.random() * max)
+                return Math.floor(Math.random() * max);
             }
+
+            function getPlayerChoice() {
+                let choice = prompt("Enter a move (rock, paper, or scissors): ");
+                choice = choice.toLowerCase;
+                return choice;
+            }
+
+            
 
             
 
