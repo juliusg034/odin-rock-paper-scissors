@@ -56,7 +56,7 @@ const rock = document.querySelector('.rock-button');
 rock.addEventListener('click', () => {
     let playerChoice = 'rock';
     const computerSelection = getComputerChoice();
-    console.log(getWinner(playerChoice, computerSelection));
+    displayScore(getWinner(playerChoice, computerSelection));
 
 })
 
@@ -64,13 +64,19 @@ const paper = document.querySelector('.paper-button');
 paper.addEventListener('click', () => {
     let playerChoice = 'paper';
     const computerSelection = getComputerChoice();
-    console.log(getWinner(playerChoice, computerSelection));
+    displayScore(getWinner(playerChoice, computerSelection));
 })
 
 const scissors = document.querySelector('.scissors-button');
 scissors.addEventListener('click', () => {
     let playerChoice = 'scissors';
     const computerSelection = getComputerChoice();
-    console.log(getWinner(playerChoice, computerSelection));
+    displayScore(getWinner(playerChoice, computerSelection));
 })
 
+function displayScore (string) {
+    const div = document.querySelector('#score');
+    const score = document.createElement('p');
+    score.textContent = string;
+    div.appendChild(score);
+} 
