@@ -9,13 +9,8 @@ function getComputerChoice() {
     }
 }
 
-function getPlayerChoice() {
-    let choice = prompt("Enter a move (rock, paper, or scissors): ");
-    choice = choice.toLowerCase();
-    return choice;
-}
 
-function play(playerSelection, computerSelection) {
+function getWinner(playerSelection, computerSelection) {
     
     if(playerSelection == "scissors" && computerSelection == "rock") {
         return "You Lose! Paper beats Rock";
@@ -55,8 +50,27 @@ function play(playerSelection, computerSelection) {
 
 }
 
-function game() {
-    const playerSelection = getPlayerChoice();
+
+
+const rock = document.querySelector('.rock-button');
+rock.addEventListener('click', () => {
+    let playerChoice = 'rock';
     const computerSelection = getComputerChoice();
-    console.log(play(playerSelection, computerSelection));
-}
+    console.log(getWinner(playerChoice, computerSelection));
+
+})
+
+const paper = document.querySelector('.paper-button');
+paper.addEventListener('click', () => {
+    let playerChoice = 'paper';
+    const computerSelection = getComputerChoice();
+    console.log(getWinner(playerChoice, computerSelection));
+})
+
+const scissors = document.querySelector('.scissors-button');
+scissors.addEventListener('click', () => {
+    let playerChoice = 'scissors';
+    const computerSelection = getComputerChoice();
+    console.log(getWinner(playerChoice, computerSelection));
+})
+

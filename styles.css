@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-color:bisque;
+}
+
+.buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.header {
+    text-align: center;
+}
