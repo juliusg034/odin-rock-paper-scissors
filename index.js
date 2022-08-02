@@ -56,10 +56,7 @@ function play(playerSelection, computerSelection) {
 }
 
 function game() {
-    for(let i = 0; i < 5; i++) {
-        alert("Game " + (i+1))
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(play(playerSelection, computerSelection));
-    }
+    const playerSelection = getPlayerChoice();
+    const computerSelection = getComputerChoice();
+    console.log(play(playerSelection, computerSelection));
 }
